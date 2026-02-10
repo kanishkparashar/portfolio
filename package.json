@@ -1,0 +1,19 @@
+{
+  "name": "portfolio-vercel",
+  "version": "1.0.0",
+  "description": "Portfolio website with Vercel serverless functions",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"cd app && npm run dev\" \"cd portfolio-server && npm start\"",
+    "build": "cd app && npm run build"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
