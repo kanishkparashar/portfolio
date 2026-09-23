@@ -36,6 +36,26 @@ const Projects = () => {
 
   const projects = [
     {
+      id: 5,
+      title: 'Hospital Management with AI',
+      subtitle: 'MERN Stack · AI Medical Triage',
+      description: 'A full-stack hospital management system for patient registration, appointment booking, doctor management, and AI-powered medical triage.',
+      icon: <Brain className="project-icon" />,
+      color: '#38bdf8',
+      gradient: 'linear-gradient(135deg, #38bdf8 0%, #2563eb 100%)',
+      features: [
+        'JWT authentication with role-based access for Admin, Doctor, and Patient',
+        'Patient registration and appointment booking workflows',
+        'AI-powered symptom analysis and medical triage recommendations',
+        'Admin and doctor dashboards with appointment management',
+        'Cloudinary integration for doctor profile photo uploads'
+      ],
+      tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Grok AI', 'Cloudinary'],
+      github: 'https://github.com/kanishkparashar/Hospital_management_with_ai',
+      demo: null,
+      status: 'Ready for Local Development'
+    },
+    {
       id: 1,
       title: 'Version Control Assistant',
       subtitle: 'AI Chatbot for Git/GitHub',
@@ -51,27 +71,27 @@ const Projects = () => {
         'OpenAI API integration with robust error handling'
       ],
       tech: ['Python', 'Streamlit', 'OpenAI API', 'Git/GitHub', 'HTML/CSS'],
-      github: 'https://github.com/Pt-kanishk',
+      github: 'https://github.com/kanishkparashar',
       demo: null,
-      status: 'In Development'
+      status: 'Completed'
     },
     {
       id: 2,
-      title: 'Fraud Detection System',
-      subtitle: 'ML-Based Transaction Security',
-      description: 'A machine learning-based fraud detection system capable of identifying suspicious transactions in real-time with 99.97% accuracy using Decision Tree Classifier.',
+      title: 'Anon Cloth',
+      subtitle: 'E-Commerce Platform',
+      description: 'A modern e-commerce platform for anonymous clothing transactions built with React, Node.js, and MongoDB. Features user authentication, product catalog, shopping cart, and secure payment integration.',
       icon: <Shield className="project-icon" />,
       color: '#4ecdc4',
       gradient: 'linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%)',
       features: [
-        'Real-time fraud detection capabilities',
-        'Decision Tree with optimized hyperparameters',
-        'Extensive data preprocessing and EDA',
-        'Feature optimization and visualization',
-        'Outlier detection and handling'
+        'Secure user authentication and privacy protection',
+        'Dynamic product catalog with filtering and search',
+        'Shopping cart and checkout functionality',
+        'Order management and tracking system',
+        'Responsive design for all devices'
       ],
-      tech: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib'],
-      github: 'https://github.com/Pt-kanishk',
+      tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe API'],
+      github: 'https://github.com/kanishkparashar',
       demo: null,
       status: 'Completed'
     },
@@ -90,7 +110,7 @@ const Projects = () => {
         'Statistical analysis and hypothesis testing'
       ],
       tech: ['Python', 'Pandas', 'Matplotlib', 'Seaborn', 'Power BI'],
-      github: 'https://github.com/Pt-kanishk',
+      github: 'https://github.com/kanishkparashar',
       demo: null,
       status: 'Ongoing'
     },
@@ -110,7 +130,7 @@ const Projects = () => {
         'Hyperparameter tuning'
       ],
       tech: ['Python', 'Scikit-learn', 'TensorFlow', 'Keras', 'Jupyter'],
-      github: 'https://github.com/Pt-kanishk',
+      github: 'https://github.com/kanishkparashar',
       demo: null,
       status: 'In Progress'
     }

@@ -148,7 +148,7 @@ npm run dev
 - Android Developer Pro
 
 ### 7. Achievements
-- 700+ problems solved
+- 750+ problems solved
 - LeetCode rating 1531
 - Platform profiles
 
@@ -170,7 +170,8 @@ npm run dev
 - **Email:** kanishkparashar159@gmail.com
 - **Phone:** +91-9005668822
 - **LinkedIn:** [kanishk-parashar](https://linkedin.com/in/kanishk-parashar)
-- **GitHub:** [Pt-kanishk](https://github.com/Pt-kanishk)
+- **GitHub:** [kanishkparashar](https://github.com/kanishkparashar)
+- **Portfolio Repository:** [kanishkparashar/portfolio](https://github.com/kanishkparashar/portfolio)
 - **LeetCode:** [kanishk4518](https://www.leetcode.com/kanishk4518)
 
 ## 📝 License

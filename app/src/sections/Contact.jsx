@@ -108,7 +108,7 @@ const Contact = () => {
     {
       name: 'GitHub',
       icon: <Github size={20} />,
-      link: 'https://github.com/Pt-kanishk',
+      link: 'https://github.com/kanishkparashar',
       color: '#333'
     },
     {
@@ -207,7 +207,7 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="John Doe"
+                    placeholder="abc..."
                     required
                   />
                 </div>
@@ -219,7 +219,7 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="john@example.com"
+                    placeholder="abc@"
                     required
                   />
                 </div>

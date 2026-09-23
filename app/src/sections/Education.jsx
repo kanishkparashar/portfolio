@@ -30,7 +30,7 @@ const Education = () => {
       degree: 'Bachelor of Technology',
       field: 'Computer Science and Engineering',
       duration: 'August 2023 - Present',
-      grade: 'CGPA: 6.85',
+      grade: 'CGPA: 6.45',
       icon: <GraduationCap className="edu-icon" />,
       color: '#ff6b6b',
       highlights: [

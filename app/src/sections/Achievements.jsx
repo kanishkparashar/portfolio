@@ -30,7 +30,7 @@ const Achievements = () => {
       stats: [
         { label: 'Problems Solved', value: '600+' },
         { label: 'Contest Rating', value: '1531' },
-        { label: 'Badges', value: '7' }
+        { label: 'Badges', value: '12' }
       ],
       color: '#ffa116',
       icon: '🔥',
@@ -77,14 +77,14 @@ const Achievements = () => {
   const milestones = [
     {
       icon: <Code2 className="milestone-icon" />,
-      title: '700+ Problems',
+      title: '850+ Problems',
       description: 'Total problems solved across all platforms',
       color: '#ff6b6b'
     },
     {
       icon: <Trophy className="milestone-icon" />,
       title: 'LeetCode Rating',
-      description: 'Achieved 1531 rating with 7 badges',
+      description: 'Achieved 1531 rating with 12 badges',
       color: '#4ecdc4'
     },
     {
@@ -185,8 +185,8 @@ const Achievements = () => {
             </div>
             <h3 className="vision-title">My Vision</h3>
             <p className="vision-quote">
-              "To become a skilled <span className="vision-highlight">Machine Learning Engineer</span> who builds 
-              intelligent, scalable systems. Combining <span className="vision-highlight">Data Science + DevOps</span> to 
+              "To become a skilled <span className="vision-highlight">Machine Learning Engineer</span> and <span className="vision-highlight">Back End Developer</span> who builds 
+              intelligent, scalable systems. Combining <span className="vision-highlight">Data Science + Backend + DevOps</span> to 
               create production-grade ML solutions."
             </p>
           </div>

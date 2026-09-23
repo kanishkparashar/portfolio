@@ -32,7 +32,8 @@ const Certificates = () => {
       skills: ['Cloud Architecture', 'Virtualization', 'Distributed Systems', 'AWS Basics'],
       color: '#ff6b6b',
       icon: '☁️',
-      verified: true
+      verified: true,
+      link: '/certificates/NPTEL.pdf'
     },
     {
       name: 'Software Development',
@@ -42,7 +43,8 @@ const Certificates = () => {
       skills: ['Agile', 'Git', 'Software Design', 'Testing'],
       color: '#4ecdc4',
       icon: '💻',
-      verified: true
+      verified: true,
+      link: '/certificates/SOFTWARE_DEVELOPMENT.pdf'
     },
     {
       name: 'Android Developer Pro',
@@ -52,15 +54,16 @@ const Certificates = () => {
       skills: ['Java', 'Kotlin', 'Android Studio', 'Firebase', 'App Deployment'],
       color: '#45b7d1',
       icon: '📱',
-      verified: true
+      verified: true,
+      link: '/certificates/ANDROID_DEVELOPMENT.pdf'
     }
   ]
 
   const achievements = [
     {
       title: 'Competitive Coding Expert',
-      description: 'Solved 700+ problems across LeetCode and GeeksForGeeks',
-      details: 'LeetCode rating 1531, earned 7 badges',
+      description: 'Solved 850+ problems across LeetCode and GeeksForGeeks',
+      details: 'LeetCode rating 1531, earned 12 badges',
       icon: <Trophy className="achievement-icon" />,
       color: '#f9ca24'
     },
@@ -128,6 +131,17 @@ const Certificates = () => {
                         <span>Verified</span>
                       </div>
                     )}
+                    {cert.link && (
+                      <a 
+                        href={cert.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="cert-link-icon"
+                        title="View Certificate"
+                      >
+                        <ExternalLink size={18} />
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}
@@ -170,7 +184,7 @@ const Certificates = () => {
             <h3 className="subsection-title">Coding Journey</h3>
             <div className="stats-grid">
               <div className="stat-card">
-                <span className="stat-number">700+</span>
+                <span className="stat-number">850+</span>
                 <span className="stat-label">Problems Solved</span>
                 <div className="stat-platforms">
                   <span className="platform">LeetCode</span>
@@ -181,7 +195,7 @@ const Certificates = () => {
                 <span className="stat-number">1531</span>
                 <span className="stat-label">LeetCode Rating</span>
                 <div className="stat-badges">
-                  <span className="badge-count">7 Badges Earned</span>
+                  <span className="badge-count">12 Badges Earned</span>
                 </div>
               </div>
               <div className="stat-card">

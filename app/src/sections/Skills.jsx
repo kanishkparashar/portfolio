@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState } from 'react'
-import { 
-  Code2, 
-  Database, 
-  Cloud, 
-  GitBranch, 
-  Terminal, 
+import {
   BarChart3,
+  Cloud,
+  Code2,
   Cpu,
+  Database,
+  GitBranch,
   Layers,
-  Box,
-  Server
+  Server,
+  Sparkles,
+  Terminal
 } from 'lucide-react'
 
 const Skills = () => {
@@ -24,7 +24,7 @@ const Skills = () => {
           observer.disconnect()
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.12 }
     )
 
     if (sectionRef.current) {
@@ -37,83 +37,66 @@ const Skills = () => {
   const skillCategories = [
     {
       title: 'Languages',
-      icon: <Code2 className="category-icon" />,
+      subtitle: 'Core programming skills',
+      icon: Code2,
       color: '#ff6b6b',
       skills: [
-        { name: 'Python', level: 90, icon: '🐍' },
-        { name: 'Java', level: 85, icon: '☕' },
-        { name: 'JavaScript', level: 80, icon: '⚡' },
-        { name: 'C', level: 75, icon: '🔧' },
-        { name: 'HTML/CSS', level: 85, icon: '🎨' },
-        { name: 'SQL', level: 80, icon: '📊' },
-        { name: 'PHP', level: 70, icon: '🐘' }
+        { name: 'Java', level: 90, icon: Code2 },
+        { name: 'Python', level: 88, icon: Terminal },
+        { name: 'JavaScript', level: 82, icon: Sparkles },
+        { name: 'SQL', level: 80, icon: Database }
       ]
     },
     {
-      title: 'Frameworks & Libraries',
-      icon: <Layers className="category-icon" />,
+      title: 'Frameworks',
+      subtitle: 'Modern build and data tooling',
+      icon: Layers,
       color: '#4ecdc4',
       skills: [
-        { name: 'Scikit-Learn', level: 85, icon: '🤖' },
-        { name: 'Pandas', level: 88, icon: '🐼' },
-        { name: 'NumPy', level: 82, icon: '🔢' },
-        { name: 'Matplotlib', level: 80, icon: '📈' },
-        { name: 'Seaborn', level: 78, icon: '📊' },
-        { name: 'Streamlit', level: 75, icon: '🌊' },
-        { name: 'React', level: 80, icon: '⚛️' },
-        { name: 'Node.js', level: 75, icon: '🟢' }
-      ]
-    },
-    {
-      title: 'Tools & Platforms',
-      icon: <Terminal className="category-icon" />,
-      color: '#45b7d1',
-      skills: [
-        { name: 'Git', level: 90, icon: '🌿' },
-        { name: 'GitHub', level: 88, icon: '🐙' },
-        { name: 'Linux', level: 80, icon: '🐧' },
-        { name: 'Docker', level: 75, icon: '🐳' },
-        { name: 'Kubernetes', level: 70, icon: '☸️' },
-        { name: 'AWS', level: 72, icon: '☁️' },
-        { name: 'VS Code', level: 90, icon: '💻' },
-        { name: 'Android Studio', level: 75, icon: '📱' }
-      ]
-    },
-    {
-      title: 'Data & Analytics',
-      icon: <BarChart3 className="category-icon" />,
-      color: '#f9ca24',
-      skills: [
-        { name: 'MySQL', level: 85, icon: '🐬' },
-        { name: 'SQLite', level: 80, icon: '🗄️' },
-        { name: 'MongoDB', level: 75, icon: '🍃' },
-        { name: 'MS Excel', level: 88, icon: '📑' },
-        { name: 'Power BI', level: 78, icon: '📊' },
-        { name: 'Figma', level: 72, icon: '🎨' }
+        { name: 'React.js', level: 85, icon: Layers },
+        { name: 'Node.js', level: 80, icon: Server },
+        { name: 'Express.js', level: 78, icon: Code2 },
+        { name: 'Scikit-learn', level: 82, icon: Cpu },
+        { name: 'Pandas', level: 84, icon: BarChart3 },
+        { name: 'NumPy', level: 80, icon: Cpu },
+        { name: 'Matplotlib', level: 78, icon: BarChart3 }
       ]
     },
     {
       title: 'DevOps & Cloud',
-      icon: <Cloud className="category-icon" />,
+      subtitle: 'Shipping and deployment workflows',
+      icon: Cloud,
       color: '#6c5ce7',
       skills: [
-        { name: 'CI/CD', level: 75, icon: '🔄' },
-        { name: 'Docker Compose', level: 72, icon: '📦' },
-        { name: 'GitHub Actions', level: 78, icon: '⚡' },
-        { name: 'Cloud Computing', level: 80, icon: '☁️' }
+        { name: 'Docker', level: 84, icon: Cloud },
+        { name: 'Jenkins', level: 78, icon: GitBranch },
+        { name: 'AWS', level: 76, icon: Cloud },
+        { name: 'CI/CD', level: 80, icon: Terminal }
+      ]
+    },
+    {
+      title: 'Tools & Platforms',
+      subtitle: 'Developer productivity and analysis',
+      icon: Terminal,
+      color: '#45b7d1',
+      skills: [
+        { name: 'Git', level: 90, icon: GitBranch },
+        { name: 'GitHub', level: 88, icon: Code2 },
+        { name: 'Streamlit', level: 80, icon: Sparkles },
+        { name: 'Power BI', level: 82, icon: BarChart3 }
       ]
     },
     {
       title: 'Coursework',
-      icon: <Cpu className="category-icon" />,
+      subtitle: 'Academic foundations in computer science',
+      icon: Cpu,
       color: '#a29bfe',
       skills: [
-        { name: 'DBMS', level: 85, icon: '🗃️' },
-        { name: 'OOP', level: 88, icon: '🎯' },
-        { name: 'Computer Networks', level: 80, icon: '🌐' },
-        { name: 'Operating Systems', level: 82, icon: '💿' },
-        { name: 'Data Structures', level: 85, icon: '📚' },
-        { name: 'Algorithms', level: 83, icon: '🧮' }
+        { name: 'Data Structures & Algorithms', level: 88, icon: Cpu },
+        { name: 'OOPS', level: 86, icon: Layers },
+        { name: 'DBMS', level: 84, icon: Database },
+        { name: 'Computer Networks', level: 80, icon: Server },
+        { name: 'Operating System', level: 78, icon: Terminal }
       ]
     }
   ]
@@ -122,69 +105,84 @@ const Skills = () => {
     <section id="skills" className="skills" ref={sectionRef}>
       <div className="section-container">
         <div className={`section-header ${isVisible ? 'animate-in' : ''}`}>
-          <span className="section-tag">My Skills</span>
+          <span className="section-tag">Technical Skills</span>
           <h2 className="section-title">
             Technical <span className="title-highlight">Expertise</span>
           </h2>
           <div className="title-underline"></div>
           <p className="section-subtitle">
-            Technologies and tools I work with to bring ideas to life
+            Technologies and tools I use to build, analyze, and deploy applications.
           </p>
         </div>
 
         <div className="skills-grid">
-          {skillCategories.map((category, catIndex) => (
-            <div 
-              key={catIndex}
-              className={`skill-category ${isVisible ? 'animate-in' : ''}`}
-              style={{ 
-                '--category-color': category.color,
-                animationDelay: `${catIndex * 0.15}s`
-              }}
-            >
-              <div className="category-header">
-                <div 
-                  className="category-icon-wrapper"
-                  style={{ backgroundColor: `${category.color}20` }}
-                >
-                  {category.icon}
-                </div>
-                <h3 className="category-title">{category.title}</h3>
-              </div>
+          {skillCategories.map((category, catIndex) => {
+            const CategoryIcon = category.icon
 
-              <div className="skills-list">
-                {category.skills.map((skill, skillIndex) => (
-                  <div 
-                    key={skillIndex}
-                    className="skill-item"
-                    style={{ animationDelay: `${(catIndex * 0.15) + (skillIndex * 0.05)}s` }}
+            return (
+              <div
+                key={catIndex}
+                className={`skill-category ${isVisible ? 'animate-in' : ''}`}
+                style={{
+                  '--category-color': category.color,
+                  animationDelay: `${catIndex * 0.12}s`
+                }}
+              >
+                <div className="category-header">
+                  <div
+                    className="category-icon-wrapper"
+                    style={{ background: `linear-gradient(135deg, ${category.color}22, ${category.color}0d)` }}
                   >
-                    <div className="skill-info">
-                      <span className="skill-icon">{skill.icon}</span>
-                      <span className="skill-name">{skill.name}</span>
-                    </div>
-                    <div className="skill-bar-container">
-                      <div 
-                        className="skill-bar"
-                        style={{ 
-                          width: isVisible ? `${skill.level}%` : '0%',
-                          backgroundColor: category.color
-                        }}
-                      >
-                        <span className="skill-percentage">{skill.level}%</span>
-                      </div>
-                    </div>
+                    <CategoryIcon className="category-icon" />
                   </div>
-                ))}
+                  <div className="category-heading">
+                    <h3 className="category-title">{category.title}</h3>
+                    <p className="category-subtitle">{category.subtitle}</p>
+                  </div>
+                </div>
+
+                <div className="skills-list">
+                  {category.skills.map((skill, skillIndex) => {
+                    const SkillIcon = skill.icon
+
+                    return (
+                      <div
+                        key={`${category.title}-${skill.name}`}
+                        className="skill-item"
+                        style={{ animationDelay: `${(catIndex * 0.12) + (skillIndex * 0.08)}s` }}
+                      >
+                        <div className="skill-row">
+                          <div className="skill-main">
+                            <span className="skill-tech-icon" style={{ color: category.color }}>
+                              <SkillIcon size={16} />
+                            </span>
+                            <span className="skill-name">{skill.name}</span>
+                          </div>
+                          <span className="skill-percent">{skill.level}%</span>
+                        </div>
+
+                        <div className="skill-progress-track">
+                          <div
+                            className="skill-progress-fill"
+                            style={{
+                              width: isVisible ? `${skill.level}%` : '0%',
+                              background: `linear-gradient(90deg, ${category.color} 0%, rgba(255,255,255,0.95) 100%)`
+                            }}
+                          />
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
         <div className={`soft-skills ${isVisible ? 'animate-in' : ''}`}>
           <h3 className="soft-skills-title">Soft Skills</h3>
           <div className="soft-skills-grid">
-            {['Problem-Solving', 'Project Management', 'Adaptability', 'Teamwork', 'Communication', 'Critical Thinking'].map((skill, index) => (
+            {['Problem-Solving', 'Leadership', 'Adaptability', 'Collaboration'].map((skill, index) => (
               <div key={index} className="soft-skill-tag" style={{ animationDelay: `${index * 0.1}s` }}>
                 <Server size={14} />
                 <span>{skill}</span>

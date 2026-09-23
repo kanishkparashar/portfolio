@@ -84,7 +84,7 @@ app.get('/api/portfolio', (req, res) => {
           'OpenAI API integration with error handling'
         ],
         tech: ['Python', 'Streamlit', 'HTML/CSS', 'Git/GitHub', 'OpenAI API'],
-        github: 'https://github.com/Pt-kanishk',
+        github: 'https://github.com/kanishkparashar',
         demo: null,
         image: 'version-control-assistant'
       },
@@ -100,7 +100,7 @@ app.get('/api/portfolio', (req, res) => {
           'Outlier detection and handling'
         ],
         tech: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib'],
-        github: 'https://github.com/Pt-kanishk',
+        github: 'https://github.com/kanishkparashar',
         demo: null,
         image: 'fraud-detection'
       },
@@ -115,7 +115,7 @@ app.get('/api/portfolio', (req, res) => {
           'Statistical analysis and hypothesis testing'
         ],
         tech: ['Python', 'Pandas', 'Matplotlib', 'Seaborn', 'Power BI'],
-        github: 'https://github.com/Pt-kanishk',
+        github: 'https://github.com/kanishkparashar',
         demo: null,
         image: 'data-analysis'
       }
@@ -156,13 +156,13 @@ app.get('/api/portfolio', (req, res) => {
     achievements: [
       {
         title: 'Competitive Coding & Algorithm Expertise',
-        description: 'Solved 700+ problems across LeetCode and GeeksForGeeks',
+        description: 'Solved 750+ problems across LeetCode and GeeksForGeeks',
         details: 'LeetCode rating 1531, earned 7 badges'
       }
     ],
     social: {
       linkedin: 'https://linkedin.com/in/kanishk-parashar',
-      github: 'https://github.com/Pt-kanishk',
+      github: 'https://github.com/kanishkparashar',
       leetcode: 'https://www.leetcode.com/kanishk4518',
       hackerrank: 'https://www.hackerrank.com/kanishkparashar1',
       geeksforgeeks: 'https://auth.geeksforgeeks.org/user/kanishk_parashar',

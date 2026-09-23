@@ -17,7 +17,7 @@ const Footer = () => {
   ]
 
   const socialLinks = [
-    { name: 'GitHub', icon: <Github size={18} />, link: 'https://github.com/Pt-kanishk' },
+    { name: 'GitHub', icon: <Github size={18} />, link: 'https://github.com/kanishkparashar' },
     { name: 'LinkedIn', icon: <Linkedin size={18} />, link: 'https://linkedin.com/in/kanishk-parashar' },
     { name: 'LeetCode', icon: <span className="leetcode-icon">LC</span>, link: 'https://www.leetcode.com/kanishk4518' }
   ]

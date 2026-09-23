@@ -56,7 +56,7 @@ const Navigation = () => {
         </div>
 
         <div className="nav-social desktop">
-          <a href="https://github.com/Pt-kanishk" target="_blank" rel="noopener noreferrer" className="social-icon">
+          <a href="https://github.com/kanishkparashar" target="_blank" rel="noopener noreferrer" className="social-icon">
             <Github size={20} />
           </a>
           <a href="https://linkedin.com/in/kanishk-parashar" target="_blank" rel="noopener noreferrer" className="social-icon">
@@ -88,7 +88,7 @@ const Navigation = () => {
           </a>
         ))}
         <div className="mobile-social">
-          <a href="https://github.com/Pt-kanishk" target="_blank" rel="noopener noreferrer" className="social-icon">
+          <a href="https://github.com/kanishkparashar" target="_blank" rel="noopener noreferrer" className="social-icon">
             <Github size={24} />
           </a>
           <a href="https://linkedin.com/in/kanishk-parashar" target="_blank" rel="noopener noreferrer" className="social-icon">
