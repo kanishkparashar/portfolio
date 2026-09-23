@@ -1,12 +1,4 @@
 {
   "buildCommand": "cd app && npm install && npm run build",
-  "outputDirectory": "app/dist",
-  "env": {
-    "MONGODB_URI": "@mongodb_uri"
-  },
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  "outputDirectory": "app/dist"
 }
