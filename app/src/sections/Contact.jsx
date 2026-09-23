@@ -54,22 +54,37 @@ const Contact = () => {
     setSubmitStatus(null)
 
     try {
-      const apiUrl = import.meta.env.VITE_API_URL
-      const contactUrl = apiUrl.endsWith('/api') ? `${apiUrl}/contact` : `${apiUrl}/api/contact`
-      const response = await fetch(contactUrl, {
+      const formspreeEndpoint = 'https://formspree.io/f/mdekzlpp'
+      const response = await fetch(formspreeEndpoint, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message
+        })
       })
 
-      const data = await response.json()
+      const data = await response.json().catch(() => ({}))
 
-      if (data.success) {
+      if (response.ok) {
         setSubmitStatus('success')
-        setFormData({ name: '', email: '', subject: '', message: '' })
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        })
       } else {
+        console.error('Formspree error:', {
+          status: response.status,
+          statusText: response.statusText,
+          data
+        })
         setSubmitStatus('error')
       }
     } catch (error) {
@@ -120,7 +135,7 @@ const Contact = () => {
     {
       name: 'LeetCode',
       icon: <MessageCircle size={20} />,
-      link: 'https://www.leetcode.com/kanishk4518',
+      link: 'https://leetcode.com/kanishk4518',
       color: '#ffa116'
     }
   ]
