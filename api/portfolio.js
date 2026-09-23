@@ -38,6 +38,22 @@ export default async function handler(req, res) {
     },
     projects: [
       {
+        id: 0,
+        title: 'Hospital Management with AI',
+        description: 'A full-stack hospital management system for patient registration, appointment booking, doctor management, and AI-powered medical triage.',
+        features: [
+          'JWT authentication with role-based access for Admin, Doctor, and Patient',
+          'Patient registration and appointment booking workflows',
+          'AI-powered symptom analysis and medical triage recommendations',
+          'Admin and doctor dashboards with appointment management',
+          'Cloudinary integration for doctor profile photo uploads'
+        ],
+        tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Grok AI', 'Cloudinary'],
+        github: 'https://github.com/kanishkparashar/Hospital_management_with_ai',
+        demo: null,
+        image: 'hospital-management-with-ai'
+      },
+      {
         id: 1,
         title: 'Version Control Assistant (LLM + GitHub API)',
         description: 'AI-powered chatbot that provides accurate Git/GitHub support, helping users solve merge conflicts, commit issues, and CI/CD errors.',
@@ -121,8 +137,8 @@ export default async function handler(req, res) {
     achievements: [
       {
         title: 'Competitive Coding & Algorithm Expertise',
-        description: 'Solved 750+ problems across LeetCode and GeeksForGeeks',
-        details: 'LeetCode rating 1531, earned 7 badges'
+        description: 'Solved 850+ problems across LeetCode and GeeksForGeeks',
+        details: 'LeetCode rating 1531, earned 12 badges'
       }
     ],
     social: {
