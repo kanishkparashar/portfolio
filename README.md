@@ -2,11 +2,9 @@
 
 A modern, responsive portfolio website built with the MERN stack (MongoDB, Express, React, Node.js) showcasing my skills in Data Science, Machine Learning, and DevOps.
 
-![Portfolio Preview](https://h4qiyszksmdgy.ok.kimi.link)
-
 ## 🚀 Live Demo
 
-**Frontend:** [https://h4qiyszksmdgy.ok.kimi.link](https://h4qiyszksmdgy.ok.kimi.link)
+(https://kanishkcodes.dev)
 
 ## 📋 Features
 
