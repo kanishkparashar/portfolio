@@ -132,9 +132,11 @@ npm run dev
 
 ### 4. Projects
 - 3D carousel
+- Hospital Management with AI
 - Version Control Assistant
-- Fraud Detection System
+- Anon Cloth
 - Data Analysis Projects
+- ML Model Collection
 
 ### 5. Education
 - Timeline view
@@ -148,7 +150,7 @@ npm run dev
 - Android Developer Pro
 
 ### 7. Achievements
-- 750+ problems solved
+- 850+ problems solved
 - LeetCode rating 1531
 - Platform profiles
 
