@@ -32,6 +32,37 @@ const contactSchema = new mongoose.Schema({
 
 const Contact = mongoose.model('Contact', contactSchema);
 
+async function sendContactNotification({ name, email, subject, message }) {
+  const apiKey = process.env.RESEND_API_KEY;
+  const fromEmail = process.env.RESEND_FROM_EMAIL;
+  const toEmail = process.env.CONTACT_TO_EMAIL || 'kanishkparashar159@gmail.com';
+
+  if (!apiKey || !fromEmail) {
+    return false;
+  }
+
+  const response = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      from: fromEmail,
+      to: [toEmail],
+      reply_to: email,
+      subject: `Portfolio contact: ${subject}`,
+      text: `Name: ${name}\nEmail: ${email}\n\n${message}`
+    })
+  });
+
+  if (!response.ok) {
+    throw new Error(`Resend request failed with status ${response.status}`);
+  }
+
+  return true;
+}
+
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -62,7 +93,18 @@ export default async function handler(req, res) {
     const newContact = new Contact({ name, email, subject, message });
     await newContact.save();
 
-    return res.status(201).json({ success: true, message: 'Message sent successfully!' });
+    let emailSent = false;
+    try {
+      emailSent = await sendContactNotification({ name, email, subject, message });
+    } catch (emailError) {
+      console.error('Resend notification error:', emailError.message);
+    }
+
+    return res.status(201).json({
+      success: true,
+      message: 'Message sent successfully!',
+      emailSent
+    });
   } catch (error) {
     console.error('Error saving contact:', error);
     const resp = { success: false, message: 'Failed to send message' };

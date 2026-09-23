@@ -31,6 +31,12 @@ In Vercel project settings, add the following environment variable:
   mongodb+srv://kanishkparashar159_db_user:PzaHCkQXr0ZMc4RU@cluster0.f4mjaoa.mongodb.net/portfolio?retryWrites=true&w=majority
   ```
 
+Add these Vercel environment variables for contact email notifications:
+
+- `RESEND_API_KEY` - Resend API key
+- `RESEND_FROM_EMAIL` - A verified Resend sender, such as `Portfolio <hello@yourdomain.com>`
+- `CONTACT_TO_EMAIL` - Recipient address; defaults to `kanishkparashar159@gmail.com`
+
 ### 4. Deploy
 Click "Deploy" and wait for the build to complete.
 
